@@ -6,7 +6,11 @@
             </div>
             <div>
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="{{pathFor 'postSubmit'}}">New Post</a></li>
+
+                    {{#if currentUser}}
+                        <li><a href="{{pathFor 'postSubmit'}}">New Post</a></li>
+                    {{/if}}
+
                     <li><a>{{> loginButtons align="right"}}</a></li>
                 </ul>
             </div>
