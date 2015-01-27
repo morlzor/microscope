@@ -44,7 +44,8 @@ Meteor.methods({
         var post = _.extend(_.pick(postAttributes, 'url', 'title', 'message'), {
             userId: user._id,
             author: user.username,
-            submitted: new Date().getTime()
+            submitted: new Date().getTime(),
+            commentsCount: 0
         });
 
         // Wait for 5 seconds
