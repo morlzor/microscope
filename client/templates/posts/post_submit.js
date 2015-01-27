@@ -1,11 +1,11 @@
 Template.postSubmit.events({
-    'submit form': function(e) {
-        e.preventDefault();
+    'submit form': function(event) {
+        event.preventDefault();
 
         var post = {
-            url: $(e.target).find('[name=url]').val(),
-            title: $(e.target).find('[name=title]').val(),
-            message: $(e.target).find('[name=message]').val()
+            url: $(event.target).find('[name=url]').val(),
+            title: $(event.target).find('[name=title]').val(),
+            message: $(event.target).find('[name=message]').val()
         }
 
         //post._id = Posts.insert(post);
@@ -15,7 +15,8 @@ Template.postSubmit.events({
             if(error){
                 return alert(error.reason);
             }
-           Router.go('postPage', {_id: id});
+           //Router.go('postPage', {_id: id});
         });
+        Router.go('postsList');
     }
 });
