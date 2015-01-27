@@ -9,6 +9,11 @@ Posts.allow({
 });
 */
 
+Posts.allow({
+    update: ownsDocument,
+    remove: ownsDocument
+});
+
 Meteor.methods({
 
     post: function(postAttributes) {
