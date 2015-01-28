@@ -9,6 +9,7 @@
 
                     {{#if currentUser}}
                         <li><a href="{{pathFor 'postSubmit'}}">New Post</a></li>
+                        <li class="dropdown">{{> notifications}}</li>
                     {{/if}}
 
                     <li><a>{{> loginButtons align="right"}}</a></li>
