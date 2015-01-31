@@ -2,13 +2,16 @@
     <nav class="navbar navbar-default">
         <div class="container-fluid">
             <div class="navbar-header">
-                <a class="navbar-brand" href="{{pathFor 'postsList'}}">Microscope</a>
+                <a class="navbar-brand" href="{{pathFor 'home'}}">Microscope</a>
             </div>
             <div>
                 <ul class="nav navbar-nav navbar-right">
 
+                    <li><a href="{{pathFor 'newPosts'}}">New</a></li>
+                    <li><a href="{{pathFor 'bestPosts'}}">Best</a></li>
+
                     {{#if currentUser}}
-                        <li><a href="{{pathFor 'postSubmit'}}">New Post</a></li>
+                        <li><a href="{{pathFor 'postSubmit'}}">Submit Post</a></li>
                         <li class="dropdown">{{> notifications}}</li>
                     {{/if}}
 
